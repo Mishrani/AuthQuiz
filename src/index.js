@@ -52,7 +52,11 @@ function getTurnData(authors) {
   }, []);
   const fourRandomBooks = shuffle(allBooks).slice(0, 4);
   const answer = sample(fourRandomBooks);
-
+  console.log(answer);
+  const ans = authors.find((author) =>
+    author.books.some((title) => title === answer)
+  );
+  console.log(ans);
   return {
     books: fourRandomBooks,
     author: authors.find((author) =>

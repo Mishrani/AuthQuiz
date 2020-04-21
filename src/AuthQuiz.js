@@ -21,7 +21,7 @@ function Turn({ author, books }) {
         <img src={author.imageUrl} className="authorimage" alt="Author" />
       </div>
       <div className="col-6">
-        {books.books.map((title) => (
+        {books.map((title) => (
           <Book title={title} key={title} />
         ))}
       </div>
